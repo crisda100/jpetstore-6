@@ -24,7 +24,7 @@ pipeline {
         }
         stage('SonarQube analysis') {
             steps {
-                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://http://144.22.35.11:9000/ -Dsonar.token=squ_456ef43eca1d43f987b49bf5325fb584919b0cf1 \
+                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.url=http://144.22.35.11:9000/-Dsonar.token=squ_456ef43eca1d43f987b49bf5325fb584919b0cf1 \
                        -Dsonar.projectName=petstore -Dsonar.java.binaries=. \
                        -Dsonar.projectKey=petstore '''
             }
